@@ -24,7 +24,7 @@ dependencies {
 	developmentOnly 'org.springframework.boot:spring-boot-devtools' // devtools
 	compileOnly 'org.projectlombok:lombok'  // lombok
 	annotationProcessor 'org.projectlombok:lombok' // lombok
-	
+	runtimeOnly 'com.h2database:h2' // h2database, runtimeOnly: 런타임시에만 작동
 }
 
 tasks.named('test') {
