@@ -14,7 +14,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 @Getter
-//@Setter // 엔티티 만들때 Setter 사용안해도됨, 데이터를 자유롭게 변경할 수도 있기 때문
+@Setter // 엔티티 만들때 Setter 사용안해도됨, 데이터를 자유롭게 변경할 수도 있기 때문
 @Entity // 엔티티 클래스로 인식
 public class Question {
 	@Id // 기본키로 지정

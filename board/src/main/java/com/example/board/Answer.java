@@ -14,7 +14,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 @Getter
-//@Setter
+@Setter
 @Entity
 public class Answer {
 	@Id
