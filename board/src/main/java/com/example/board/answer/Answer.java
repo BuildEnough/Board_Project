@@ -1,8 +1,10 @@
-package com.example.board;
+package com.example.board.answer;
 
 import java.time.LocalDateTime;
 
 import org.springframework.data.annotation.CreatedDate;
+
+import com.example.board.question.Question;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
