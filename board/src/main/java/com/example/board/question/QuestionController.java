@@ -12,11 +12,11 @@ import lombok.RequiredArgsConstructor;
 @Controller
 public class QuestionController {
 	
-	private final QuestionRepository questionRepository;
+	private final QuestionService questionService;
 	
 	@GetMapping("/question/list")
-	public String list(Model model) { // Model: 자바 클래스와 템플릿 간의 연결고
-		List<Question> questionList = this.questionRepository.findAll();
+	public String list(Model model) { // Model: 자바 클래스와 템플릿 간의 연결고리
+		List<Question> questionList = this.questionService.getList();
 		model.addAttribute("questionList", questionList);
 		return "question_list";
 	}
