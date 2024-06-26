@@ -12,7 +12,7 @@ import lombok.RequiredArgsConstructor;
 @Controller
 public class QuestionController {
 	
-	private final QuestionService questionService;
+	private final QuestionService questionService; // 서비스 사용
 	
 	@GetMapping("/question/list")
 	public String list(Model model) { // Model: 자바 클래스와 템플릿 간의 연결고리
