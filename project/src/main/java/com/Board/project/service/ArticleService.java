@@ -8,8 +8,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Slf4j
 @Service
@@ -70,4 +73,25 @@ public class ArticleService {
         return target;
     }
 
+    /* 트랜잭션
+//    @Transactional
+//    public List<Article> createArticles(List<ArticleForm> dtos) {
+//        // dto 묶음 -> entity 묶음 변환
+//        List<Article> articleList = new ArrayList<>();
+//        for (int i = 0; i < dtos.size(); i++) {
+//            ArticleForm dto = dtos.get(i);
+//            Article entity = dto.toEntity();
+//            articleList.add(entity);
+//        }
+//        // entity 묶음 -> DB 저장
+//        for (int i = 0; i < articleList.size(); i++) {
+//            Article article = articleList.get(i);
+//            articleRepository.save(article);
+//        }
+//        // 강제 예외(id가 -1)
+//        articleRepository.findById(-1L).orElseThrow(() -> new IllegalArgumentException("실패"));
+//
+//        // 결과 값 반환
+//        return articleList;
+    } */
 }
