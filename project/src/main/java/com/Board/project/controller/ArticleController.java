@@ -1,8 +1,10 @@
 package com.Board.project.controller;
 
 import com.Board.project.dto.ArticleForm;
+import com.Board.project.dto.CommentDto;
 import com.Board.project.entity.Article;
 import com.Board.project.repository.ArticleRepository;
+import com.Board.project.service.CommentService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -20,6 +22,8 @@ import java.util.Optional;
 public class ArticleController {
     @Autowired //객체주입, 의존성 주입
     private ArticleRepository articleRepository;
+    @Autowired
+    private CommentService commentService;
 
     @GetMapping("/articles/new")
     public String newArticleForm() {
@@ -43,7 +47,9 @@ public class ArticleController {
         log.info("id = " + id);
 
         Article articleEntity = articleRepository.findById(id).orElse(null);
+        List<CommentDto> commentsDtos = commentService.comments(id);
         model.addAttribute("article", articleEntity);
+        model.addAttribute("commentDtos", commentsDtos);
         return "articles/show";
     }
 
