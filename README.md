@@ -7,7 +7,7 @@
 [1. 프로젝트 소개](#1-프로젝트-소개)    
 [2. 프로젝트 기능](#2-프로젝트-기능)    
 [3. 개발환경](#3-개발환경)   
-[4. 백엔드](#4-백엔드)   
+[4. 데이터베이스](#4-데이터베이스)   
 [5. 프론트엔드](#5-프론트엔드)   
 [6. 실행 화면](#6-실행-화면)   
 
@@ -29,7 +29,7 @@
 - SpringBoot 3.3.1
 - Dependencies(Spring Web, H2 Database, Mustache, Spring Data JPA, PostgreSQL)
 
-### 4. DataBase
+### 4. 데이터베이스
 - H2 Database -> PostgreSQL
 
 ### 5. 프론트엔드
